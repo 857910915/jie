@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>节点操作（增删查改）</title>
+    <style type="text/css">
+    
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="user" id="first">
+    </div>
+    <input type="button" value="追加" onclick="toAdd()">
+    <input type="button" value="插入" onclick="toInsert()">
+    <input type="button" value="替换" onclick="toReplace()">
+    <input type="button" value="删除" onclick="toDelete()">
+    <div>
+         <input type="button" value="属性" onclick="toAttri()">
+    </div>
+</body>
+<script type="text/javascript">
+    // 动态添加一个元素
+    function toAdd() {
+        // 1.找到节点元素
+        var div = document.querySelector("div");
+        // 2.创建一个元素节点
+        var input = document.createElement("input");
+        // 3.节点元素追加到div中(在后面追加)
+        div.appendChild(input);
+    }
+    // 动态插入一个元素
+    function toInsert() {
+        // 1.创建一个元素
+        var span = document.createElement("span");
+        // 2.给标签设置内容
+        span.innerHTML = "我是qq";
+        // 3.插入元素
+        // 3.1找到父节点元素
+        var div = document.querySelector("div");
+        // 3.2找到要在哪个元素之前添加节点，最后一个之前
+        var last = div.lastElementChild;
+        div.insertBefore(span, last);
+    }
+    // 动态替换一个元素
+    function toReplace() {
+        // 1.创建一个节点元素
+        var newSpan = document.createElement("span");
+        newSpan.innerHTML = "Hello!";
+        // 2.找到要替换的元素
+        var first = document.querySelector("input");
+        // 3.替换子节点元素
+        var div = document.querySelector("div");
+        // 替换元素、被替换元素
+        div.replaceChild(newSpan, first);
+    }
+    // 删除指定节点元素
+    function toDelete() {
+        // 1.找到要删除的节点
+        var delElement = document.querySelector("sapn");
+        // 2.删除指定节点
+        var div = document.querySelector("div");
+        div.removeChild(delElement);
+    } 
+    // 属性节点  对属性进行操作
+    function toAttri(){
+        // 1.获取要操作的元素节点
+        var input=document.querySelector("#first");
+        // 2.设置属性（key、value）
+        input.setAttribute("value","你好！");
+        // 3.修改属性的值
+        input.setAttribute("value","Hello！");
+        // 4.设置属性的样式
+        input.setAttribute("style","color:blue");
+        // 5.更改样式
+        input.style.backgroundColor="yellow";
+        input.style.borderRadius="10px";
+        // 6.删除属性
+        input.removeAttribute("value");
+        
+    }  
+</script>
+
+</html>

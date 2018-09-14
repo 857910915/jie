@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: block;
+    background: url(../images/body-bg.png);
+}
+
+/* 顶部 logo */
+.top .logo{
+    display: inline-block;
+    width: 200px;
+    height: 65px;
+    margin: 5vh 0 4vh 130px;
+    background: url(../images/logo-osc-white.svg) no-repeat;
+}
+
+/* 注册界面 */
+.body{
+    position: relative;
+    width: 685px;
+    margin: auto;
+    padding: 35px 30px;
+    color: #666666;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #767676;
+    background-color: white;
+}
+/* 表单 */
+.form{
+    display: flex;
+    box-sizing: border-box;
+}
+/* 左边 */
+.box-aw{
+    width: 440px;
+    /* margin-right: 52px;
+    margin-left: 38px;
+    min-width: 0; */
+    float: left;
+
+}
+.form-item{
+    width: 400px;
+    margin-right: 52px;
+    margin-left: 38px;
+    margin-bottom: 20px;
+}
+input:not([type=button]) {
+    /* width: 258px;
+    height: 22px; */
+    font-size: .875rem;
+    line-height: 1.6;
+    padding: 12px 20px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    color: #666;
+    border: 1px solid #dce4e6;
+    border-radius: 3px;
+    outline: 0;
+    background: #f3f6f8;
+}
+.text{
+    width: 310px;
+}
+.form-tips{
+    position: absolute;
+    top: 100%;
+}
+
+/* 验证码 */
+.form-ctrl-1{
+    float: left;
+    width: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.form-image{
+    width: 120px;
+    float: left;
+    margin-bottom: 27px;
+}
+/* 获取验证码 */
+ .form-phone-code {
+    font-size: .875rem;
+    display: inherit;
+    margin-left: 12px;
+}
+.box-fr {
+    transition: width .2s;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    -webkit-box-ordinal-group: 4;
+    order: 3;
+    width: 120px;
+}
+.btn-green {
+    color: #fff;
+    background: #31b968;
+}
+.btn, .btn a {
+    height: 47px;
+    padding: .4rem 1.2rem;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    outline: 0;
+}
+
+.checkbox-group input {
+    display: none;
+    opacity: 0;
+}
+.box-user-gender{
+    width: 350px;
+    height: 25px;
+    margin-right: 52px;
+    margin-left: 38px;
+    margin-bottom: 20px;
+}
+/* 选择性别 */
+.boy{
+    float: left;
+    width: 158px;
+    height: 24px;
+}
+
+.gril{
+    float: left;
+    width: 158px;
+    height: 24px;
+}
+.ic-svg {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+}
+.ic-male {
+    background-image: url(../images/ic-male.svg);
+}
+.ic-svg {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.osc-checkbox-accept-term {
+    font-size: 1rem;
+    line-height: 15px;
+    position: relative;
+    display: inline-block;
+    min-width: 17px;
+    min-height: 17px;
+    vertical-align: middle;
+    outline: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.btn a.block, .btn.block {
+    display: block;
+    width: 350px;
+}
+
+/* 右边 */
+.box-fr{
+    width: 280px;
+    float: left;
+    border-left: 1px #bfc4c5 solid;
+    transition: width .2s;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    -webkit-box-ordinal-group: 4;
+    order: 3;
+    padding-left: 40px;
+}
+.fr-top{
+    width: 100%;
+    border: white 1px;
+    margin-bottom: 40px;
+}
+.span-box{
+    color: #666;
+    font-weight: 700;
+}
+.btn-link, .btn-link a {
+    padding: 0;
+    color: #31b968;
+    border: none;
+    border-radius: 0;
+    font-size: 25px;
+}
+.fr-bottom{
+    width: 100%;
+    border: white 1px;
+    margin-bottom: 40px;
+}
+
+/* 底部 */
+.foot{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.zi a{
+    text-decoration: none;
+    color: #31b968;
+    padding-left: 5px;
+}

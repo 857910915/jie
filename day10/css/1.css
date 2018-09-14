@@ -1,0 +1,19 @@
+
+form{
+    width: 700px;
+    margin: auto;
+    border: 1px solid #19ca37;
+}
+.first{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    
+}
+.button{
+    height: 30px;
+    width: 70px;  
+    
+}

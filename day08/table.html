@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table操作</title>
+    <style type="text/css">
+        table{
+            border: 1px solid;
+            border-spacing: 0;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        td{
+            border:1px solid;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>标题文档</caption>
+        <tr>
+            <td>张三</td>
+            <td>王二</td>
+            <td>李四</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>王二</td>
+            <td>李四</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>王二</td>
+            <td>李四</td>
+        </tr>
+    </table>
+</body>
+<script type="text/javascript">
+    // 获取table
+    var tb=document.querySelector("table");
+    // 获取所有行  返回一个集合对象
+    var rows=tb.rows;
+    console.log(rows);
+    console.log(tb.rows.length);
+
+    // 获取其中一行总共多少列  返回一个集合
+    var cols=rows[0].cells;
+    console.log(cols);
+    // 给第一行 第一列设置背景颜色
+    var cell=tb.rows[0].cells[0];
+    cell.style.backgroundColor="green";
+    // 更改文本为一个图片
+    cell.innerText="<img src='2.png'>"//文本识别
+    // cell.innerHTML="<img src='2.png'>"//可以识别为html
+    // 想表各种新增一行  0位置
+    var tr=tb.insertRow(0);
+    // 新增列
+    var cell=tr.insertCell(0);
+    // cell 设置文本内容
+    cell.innerText="打撒";
+    cell=tr.insertCell(1);
+    cell.innerText="的司法程序";
+    cell=tr.insertCell(2);
+    cell.innerText="cxcsd";
+    // 删除一行
+    // tb.deleteRow(0);
+    // 删除表格的最后一行
+    // tb.deleteRow(tb.rows.length-1);
+    // 删除指定的某一列
+    tr.deleteCell(0);
+</script>
+</html>

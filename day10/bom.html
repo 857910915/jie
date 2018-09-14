@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bom</title>
+    <script type="text/javascript">
+        // bom 浏览器对象  获取屏幕的尺寸、高宽、位置、打开、关闭（窗口）
+        document.write("屏幕宽度："+window.innerWidth+"<br>");
+        document.write("屏幕高度："+window.innerHeight+"<br>");
+        document.write("屏幕可用宽度："+screen.availWidth+"<br>");
+        document.write("屏幕可用高度："+screen.availHeight+"<br>");
+        // location 可以获取URL的相关信息
+        // window.location.assign("#");
+        document.write("主机名称："+location.hostname+"<br>");
+        document.write("url："+location.pathname+"<br>");
+        document.write("端口号："+location.port+"<br>");
+        
+        function next(){
+            window.history.forward();
+        }
+        function pre(){
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <a href="./表单验证1.html">口</a>
+    <button onclick="next()">下一页</button>
+    <button onclick="pre()">上一页</button>
+</body>
+</html>

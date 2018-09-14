@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/oschina.js"></script>
+    <title>开源中国 - 注册</title>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <a href="#">
+            <span class="logo"></span>
+        </a>
+    </div>
+    <!-- 注册界面 -->
+    <div class="body">
+        <div class="form">
+            <!-- 左边 -->
+            <div class="box-aw">
+
+                <div class="form-item">
+                    <div class="form-ctrl">
+                        <input onblur="regUserPhone(this)" class="text" type="text" maxlength="11" id="userPhone" placeholder="请输入手机号码" title="手机号码">
+                    </div>
+                    <div class="form-tips">
+
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-ctrl">
+                        <input class="text" type="text" id="userEmail" placeholder="请输入邮箱地址" title="邮箱地址">
+                    </div>
+                    <div class="form-tips">
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-ctrl">
+                        <input class="text" type="text" id="userName" maxlength="20" placeholder="请输入昵称，至少2个字符，至多20个" title="昵称，至少2个字符，至多20个字符">
+                    </div>
+                    <div class="form-tips"></div>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-ctrl">
+                        <input class="text" type="password" id="userPassword" placeholder="请输入密码，字母或特殊符号和数字结合" title="密码，字母或特殊符号和数字结合">
+                    </div>
+                    <div class="form-tips"></div>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-ctrl">
+                        <input class="text" type="password" id="confirmPwd" placeholder="请再次输入密码" title="请再次输入密码">
+                    </div>
+                    <div class="form-tips"></div>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-ctrl-1">
+                        <input type="text" id="vCode" placeholder="四位验证码" title="四位验证码">
+                    </div>
+                    <div class="form-image">
+                        <img id="img_vcode" align="absmiddle" alt="..." src="./images/captcha.gif">
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-ctrl-1">
+                        <input type="text" id="phoneVcode" placeholder="请输入短信验证码" title="短信验证码">
+                    </div>
+                    <div class="form-image">
+                        <span class="form-phone-code" title="点击切换验证码">
+                            <input type="button" value="获取验证码" class="btn btn-green box vertical send-phone-vcode">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-ctrl-1">
+                        <input type="text" id="emailVcode" placeholder="请输入邮箱验证码" title="邮箱验证码">
+                    </div>
+                    <div class="form-image">
+                        <span class="form-phone-code" title="点击切换验证码">
+                            <input type="button" value="获取验证码" class="btn btn-green box vertical send-phone-vcode">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="box-user-gender">
+                    <div class="boy">
+                        <input type="radio" id="phone-male" checked="checked" name="phone-gender">
+                        <label for="phone-male">
+                            <i class="ic-svg ic-male">
+
+                            </i>
+                            男士
+                        </label>
+                    </div>
+                    <div class="gril">
+                        <input type="radio" id="phone-female" name="phone-gender">
+                        <label for="phone-female">
+                            <i class="ic-svg ic-female">
+
+                            </i>
+                            女士
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-item">
+                    <div class="form-ctrl osc-checkbox-accept-term">
+                        <input id="accept_term_phone" name="accept_term_phone" type="checkbox" value="1" tabindex="0" class="accept_term">
+                        <label for="accept_term_phone">已阅读并同意<a href="/terms" target="_blank">服务条款</a></label>
+                    </div>
+                    <div class="form-tips"></div>
+                </div>
+                <div class="form-button form-item">
+                    <button type="button" class="btn btn-green block btn-logon">
+                        注册
+                    </button>
+                    <div class="form-tips">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边 -->
+            <div class="box-fr">
+                <div class="fr-top">
+                    <span class="span-box">
+                        已经注册过?
+                    </span>
+                    <br><br>
+                    <a href="#" class="btn-link">
+                        直接登录 →
+                    </a>
+                </div>
+                <div class="fr-bottom">
+                    <div class="span-box">使用以下账号直接登录</div>
+                    <div class="login-logos">
+                        <a href="#">
+                            <img src="./images/logos.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <p>©开源中国(OSChina.NET) |<span class="zi"><a href="#">关于我们</a></span> |<span class="zi"><a href="#">联系我们</a></span>|<span class="zi"><a href="#"> @新浪微博</a></span> |<span class="zi"><a href="#">  开源中国手机版</a></span> 粤ICP备12009483号-3</p>
+        <p> 开源中国(OSChina.NET)是 工信部开源软件推进联盟 指定的官方社区</p>
+    </div>
+</body>
+
+</html>

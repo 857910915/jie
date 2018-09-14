@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/1.css">
+    <title>表单验证1</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="return regForm()">
+        <span class="first">用户名:</span> 
+        <input type="text" name="user" placeholder="请输入用户名">
+        <span>用户名必须是4-16位 字母 数字 下划线</span><br>
+        <span class="first">密码:</span>
+        <input type="password" name="pwd">
+        <span>密码必须是4-16位 </span><br>
+        <span class="first">确认密码:</span>
+        <input type="password" name="rpwd">
+        <span>确认密码</span><br>
+        <input type="submit" value="注册" class="button">
+    </form>
+</body>
+<script type="text/javascript">
+    // 定义一个函数进行表单验证
+    function regForm() {
+        // 1.获取user
+        var user=document.getElementsByName("user")[0];
+        // 判断内容是否符合
+        console.log(user.value);
+        if(!(user.value.length>=4&&user.value.length<=16)){
+            alert("请输入正确的用户名");
+            return false;
+        }
+        // 2.获取pwd
+        var pwd=document.getElementsByName("pwd")[0];
+        if(!(pwd.value.length>=4&&pwd.value.length<=16)){
+            alert("请输入正确的用户名");
+            return false;
+        }
+        // 3.获取rpwd
+        var rpwd=document.getElementsByName("rpwd")[0];
+        if(!(pwd.value===rpwd.value)){
+            alert("两次密码不一致，请重新输入");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</html>

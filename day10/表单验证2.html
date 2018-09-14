@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/1.css">
+    <script src="js/2.js"></script>
+    <title>表单验证2</title>
+</head>
+
+<body>
+    <form action="127.0.0.1">
+        <span class="first">用户名:</span>
+        <input type="text" name="user" placeholder="请输入用户名" onblur="regUser(this)">
+        <span>用户名必须是4-16位 字母 数字 下划线</span><br>
+        <span class="first">密码:</span>
+        <input type="password" name="pwd" onblur="regPwd(this)">
+        <span>密码必须是4-16位 </span><br>
+        <span class="first">确认密码:</span>
+        <input type="password" name="rpwd" onblur="regRpwd(this)">
+        <span>确认密码</span><br>
+        <input type="submit" value="注册" class="button" onclick="return onRegister()"> 
+    </form>
+</body>
+
+</html>

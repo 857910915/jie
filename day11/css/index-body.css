@@ -1,0 +1,380 @@
+.body {
+  margin-top: 20px;
+  width: 1200px;
+  margin: auto;
+}
+/* 左侧 */
+.left {
+  float: left;
+  width: 900px;
+}
+/* 综合资讯和软件 */
+.frist {
+  width: 900px;
+  height: 391px;
+  /* background-color: aqua; */
+}
+.frist-box {
+  width: 442px;
+  margin-right: 8px;
+  height: 100%;
+  float: left;
+}
+.frist-box-top {
+  height: 30px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid black;
+}
+.text {
+  color: black;
+  font-weight: bolder;
+  position: absolute;
+}
+.text1 {
+  color: black;
+  font-weight: bolder;
+  position: absolute;
+}
+.text::before {
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  display: block;
+  width: 3px;
+  height: 24px;
+  margin-top: -12px;
+  content: "";
+  background: #21b351;
+}
+.frist-top-right {
+  height: 30px;
+  width: 100px;
+  float: right;
+}
+
+.diamond {
+  float: left;
+  display: block;
+  height: 10px;
+  width: 10px;
+  margin: 0 3px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #c6c9c7;
+}
+#diamond-active {
+  background: #21b351;
+}
+.many {
+  float: left;
+  color: #c6c9c7;
+  font-size: 15px;
+  margin-left: 16px;
+  margin-right: 0;
+  margin-top: 5px;
+}
+.many:hover {
+  color: #21b351;
+}
+.frist-box-mid {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  display: block;
+  overflow: hidden;
+  height: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #022856;
+}
+.title:hover {
+  color: #0964d4;
+}
+.title-word {
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  height: 40px;
+  margin: 2px 0 0;
+  color: #7d7d7d;
+}
+.frist-box-bottom {
+  height: 200px;
+  width: 100%;
+}
+.news {
+  width: 100%;
+  height: 260px;
+}
+.news1 {
+  visibility: hidden;
+}
+.news-tips {
+  height: 26px;
+  width: 100%;
+}
+.news-tips-text {
+  color: #022856;
+  font-size: 14px;
+  position: relative;
+  text-overflow: ellipsis;
+  padding-left: 13px;
+}
+.news-tips-text:hover {
+  color: #0964d4;
+}
+.news-tips-text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-top: -2px;
+  content: "";
+  border-radius: 50%;
+  background: #7ed321;
+}
+.news-data {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* 小广告 */
+.smallgg {
+  height: 65px;
+  width: 100%;
+}
+/* 每周更新 */
+.updata {
+  width: 100%;
+  height: 360px;
+}
+.updata-left {
+  width: 548px;
+
+  float: left;
+}
+.updata-many {
+  float: right;
+}
+.updata-img {
+  height: 296px;
+  width: 100%;
+}
+.updata-img-1 {
+  height: 296px;
+  width: 249px;
+  float: left;
+  border: 1px solid white;
+}
+.figure-title {
+  background-color: black;
+  opacity: 0.1;
+  height: 298px;
+  position: relative;
+  right: 0;
+  bottom: 296px;
+}
+.figure-title-text {
+  position: absolute;
+  top: 237px;
+  font-size: 23px;
+  white-space: normal;
+  color: #fff;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.updata-img-2 {
+  float: left;
+  border: 1px solid white;
+  height: 147px;
+  width: 145px;
+}
+.img-2-box {
+  background-color: black;
+  opacity: 0.1;
+  height: 147px;
+  position: relative;
+  right: 0;
+  bottom: 150px;
+}
+.img-2-text {
+  position: absolute;
+  top: 100px;
+  white-space: normal;
+  color: #fff;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* 码云最新推荐 */
+.updata-right {
+  float: left;
+  margin-left: 14px;
+  width: 337px;
+}
+.myicon {
+  height: 16px !important;
+  margin: 4px 5px 6px 0;
+}
+.text2 {
+  font-weight: 700;
+  position: relative;
+  left: -20px;
+  bottom: 9px;
+  color: #000;
+}
+.git-project {
+  display: block;
+  margin: 0 0 10px;
+  line-height: 14px;
+}
+.updata-right-box {
+  width: 100%;
+  position: relative;
+}
+.git-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0 8px 0 0;
+  color: #022856;
+  float: left;
+}
+.git-name:hover {
+  color: #0964d4;
+}
+.git-lang {
+  font-size: 12px;
+  color: #9f9f9f;
+  margin-top: 3px;
+  float: left;
+}
+.git-content {
+  clear: left;
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+  max-height: 36px;
+  margin: 0;
+  color: #111;
+  white-space: normal;
+}
+/* 开源中国众包 */
+.packeg {
+  width: 100%;
+  height: 375px;
+}
+#manypackeg {
+  color: #7d7d7d;
+}
+#manypackeg:hover {
+  color: #21b351;
+}
+.goto {
+  position: relative;
+  left: 6px;
+}
+
+.packeg-box {
+  width: 100%;
+  height: 315px;
+}
+.packeg-box-left {
+  float: left;
+  width: 540px;
+  height: 100%;
+}
+.packeg-box-titles {
+  width: 100%;
+  line-height: 26px;
+  height: 26px;
+}
+
+.titles-contents {
+  display: inline-block;
+  width: 400px;
+  height: 100%;
+  font-size: 14px;
+  position: relative;
+  padding: 0 0 0 13px;
+  text-overflow: ellipsis;
+  color: #022856;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.titles-contents:hover {
+  color: #0964d4;
+}
+.titles-contents::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-top: -2px;
+  content: "";
+  border-radius: 50%;
+  background: #cfcfcf;
+}
+.sincerity {
+  color: #fff;
+  background: rgb(255, 102, 0);
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  display: inline-block;
+  margin-left: 4px;
+  margin-top: -2px;
+}
+.box-fr-yen {
+  float: right;
+  font-size: 12px;
+  color: #a5613e;
+  position: relative;
+  right: 0;
+}
+/* 开源技术服务 */
+.packeg-box-right {
+  width: 345px;
+  height: 100%;
+  float: left;
+  margin-left: 15px;
+}
+.server-top {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 7px;
+}
+.sercice-img {
+  float: left;
+}
+.service-title {
+  float: left;
+  font-size: 14px;
+}
+
+.sercice-info {
+}
+.sercice-box {
+  font-size: 0;
+  margin: 0 0 26px;
+}
+
+/* 右侧 */

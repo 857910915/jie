@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计时器</title>
+</head>
+
+<body>
+    <div>
+        当前系统时间
+    </div>
+    <input type="button" value="启动" onclick="start()">
+    <input type="button" value="停止" onclick="stop()">
+</body>
+<script type="text/javascript">
+    // 设置启动定时器
+    // var timer=setImmediate(执行函数，间隔的时间);
+    function updatetime() {
+        var date = new Date();
+        // 获取年
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var day = date.getDate();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        // 拼接字符串
+        var str = year + " 年" + (month+1) + " 月" + day + " 日" + h + ":" + m + ":" + s;
+        var div = document.querySelector("div");
+        div.innerText = "当前系统时间是：" + str;
+    }
+    // 启动定时器
+    var timer=setInterval(updatetime,1000);
+    var timer;
+    // 清空定时器
+    // clearImmediate(timer);
+    function start() {
+        // 启动定时器
+        if (timer == undefined) {
+            timer = setInterval(updatetime, 1000);
+        }
+    }
+    function stop() {
+        if (timer != undefined) {
+            clearInterval(timer);
+            timer = undefined;
+        }
+    }
+    // 延迟多少s执行一个函数
+    // setTimeout(openUrl,5000);
+    // function openUrl(){
+    //     // 打开连接
+    //     window.location.href="http://www.runoob.com/js/js-htmldom-collections.html";
+    // }
+    // 清空延时
+    // clearImmediate(timer);
+
+
+</script>
+
+</html>

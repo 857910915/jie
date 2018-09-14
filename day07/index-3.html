@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变量的定义和使用</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // js变量  js（弱类型）
+        // 变量名的声明 字母 数字 下划线 $ 
+        // 不能是js的关键字保留字
+        // 不能以数字开头
+        var i = 1;//整数
+        var i1 = "abc";//字符串
+        var i2 = true;//布尔值类型
+        var i3 = 10.5;//浮点数类型
+        var i4;
+        var i5 = 6, i6 = "123";//同时定义多个变量，不建议使用
+        //查看当前变量的类型 typeof
+        console.log(typeof i);
+        console.log(typeof i1);
+        console.log(typeof i2);
+        console.log(typeof i3);
+        console.log(typeof i4);
+        console.log(typeof i5);
+        console.log(typeof i6);
+        fun1();
+        // js支持面向对象
+        var obj = new Object();//初始化一个对象
+        console.log(typeof obj);
+
+        // 函数
+        function fun1() {
+            //函数体
+            document.write("hhh");
+            confirm("8888");
+        }
+        console.log(typeof fun1);
+
+    </script>
+</body>
+
+</html>

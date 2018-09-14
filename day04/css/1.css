@@ -1,0 +1,247 @@
+body{
+    margin: 0px;
+}
+/* 外框 */
+.big{
+   background: url(../images/top_bg.png) no-repeat center top;
+   text-align: center;
+}
+/* 头部 */
+.top{
+    height: 35px;
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid rebeccapurple; */
+    text-align: center;
+}
+
+/* logo */
+ /* .top-left{
+    height: 30px;
+    width: 450px;
+    float: left;
+    border: 1px solid #5384a5;
+} */
+
+/* 时间、天气 */
+/* .top-center{
+    height: 30px;
+    width: 550px;
+    float: left;
+    border: 1px solid #b35e5e;
+} */
+/* 登录 */
+/* .top-right{
+    height: 30px;
+    width: 244px;
+    float: left;
+    border: 1px solid #37a733;
+}  */
+/* 中间 */
+.body{
+    width: 1000px;
+    margin: auto;
+    /* border: 1px solid burlywood; */
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+/* 首页图片 */
+.body-head{
+    height: 200px;
+    width: 1000px;
+    /* border: 1px solid #a73b3b; */
+    margin-top: 10px;
+}
+/* 导航栏 */
+.body-top{
+    height: 60px;
+    width: 1000px;
+    margin: auto;
+    /* border: 1px solid #b0ca3b; */
+    margin-bottom: 20px;
+}
+/* 中间信息 */
+.body-content{
+    width: 988px;
+    margin: auto;
+    /* border: 1px solid #44a176; */
+    margin: 5px;
+}
+/* 第一板块 */
+.body-content-first{
+    height: 750px;
+    width: 1000px;
+    margin: auto;
+    /* border: 1px solid #3382a7; */
+}
+/* 第一板块左边 */
+.body-content-first-lift{
+    width: 400px;
+    height: 750px;
+    /* border: 1px solid #ce3131; */
+    float: left;
+}
+.first{
+    width: 400px;
+    height: 294px;
+    /* border: 1px solid #33387e; */
+    margin-top: 5px;
+}
+.second{
+    width: 400px;
+    height: 140px;
+    margin-top: 5px;
+    /* border: 1px solid #6412c2; */
+}
+.body-content-first-right{
+    float: left;
+    width: 600px;
+    height: 750px;
+    /* border: 1px solid #a9bce0; */
+}
+.right-first{
+    float: left;
+    width: 290px;
+    height: 140px;
+    /* border: 1px solid #461d1d; */
+    margin: 5px;
+}
+.right-second{
+    float: left;
+    width: 290px;
+    height: 278px;
+    /* border: 1px solid #cf5d5d; */
+    margin: 5px;
+}
+.right-third{
+    float: left;
+    width: 138px;
+    height: 140px;
+    /* border: 1px solid #b4a8a8; */
+    margin: 5px;
+}
+
+/* 广告 */
+.guanggao{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 985px;
+    height: 120px;
+    /* border: 1px solid #3a16bd; */
+}
+
+/* 第2、3板块 */
+.content-second{
+    height: 460px;
+    width: 980px;
+    /* border:1px solid #1cd62c; */
+    margin: 5px;
+    margin-bottom: 20px;
+    background: url(../images/b-8.png) no-repeat;
+}
+.content-second-left{
+    height: 458px;
+    width: 404px;
+    /* border: 1px solid #db1b1b; */
+    float: left;
+}
+.l-1{
+    width: 190px;
+    height: 140px;
+    /* border: 1px solid #adc042; */
+    margin: 5px;
+    float: left;
+}
+.content-second-right{
+    width: 570px;
+    height: 458px;
+    /* border: 1px solid #aa1d1d; */
+    float: left;
+}
+.r-1{
+    margin:5px;
+    height: 292px;
+    width: 565px;
+    /* border: 1px solid #289143; */
+    float: left;
+}
+.r-2{
+    width: 130px;
+    height: 140px;
+    margin: 5px;
+    /* border: 1px solid #eb0d0d; */
+    float: left;
+}
+/* 第四版块 */
+.content-four{
+    height: 458px;
+    width: 985px;
+    margin: 5px;
+    /* border: 1px solid #49d35b; */
+    margin-bottom: 20px;
+    background: url(../images/b-9.png) no-repeat no-repeat;
+}
+.content-four-left{
+    height: 445px;
+    width: 400px;
+    margin: 5px;
+    /* border: 1px solid #914545; */
+    float: left;
+}
+.four-top{
+    height: 56px;
+    width: 380px;
+    margin: 10px;
+    /* border: 1px solid #fa1697; */
+}
+.four-bottom{
+    height: 364px;
+    width: 380px;
+    margin: 10px;
+    /* border: 1px solid #3d14d1; */
+}
+/* 第五版块 */
+.content-five{
+    margin: 5px;
+    height: 300px;
+    width: 985px;
+    /* border: 1px solid #5e23cc; */
+    margin-bottom: 0px;
+    background: url(../images/b-10.png) no-repeat center;
+}
+.five-1{
+    margin: 5px;
+    height: 290px;
+    width: 395px;
+    /* border: 1px solid #65606e; */
+    float: left;
+}
+.five-2{
+    margin: 5px;
+    height: 290px;
+    width: 260px;
+    /* border: 1px solid #65606e; */
+    float: left;
+}
+.five-3{
+    margin: 5px;
+    height: 290px;
+    width: 290px;
+    /* border: 1px solid #65606e; */
+    float: left;
+}
+/* 最后一块 */
+.last{
+    height: 50px;
+    width: 985px;
+    /* border: 1px solid #1067e9; */
+}
+/* 尾部 */
+.foot{
+    height: 110px;
+    width: 100%;
+    margin-top: 50px;
+    margin: auto;
+    background: rgb(229, 65, 55);
+    /* border: 1px solid red; */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>copy节点</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            width: 300px;
+        }
+        .first,.second,.third{
+            width: 300px;
+        }
+        .second{
+            height: 100px;
+            background: green;
+        }
+        .third{
+            height: 200px;
+            background: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <div class="second">
+            <ul>
+                <li>三国演义</li>
+            </ul>
+        </div>
+        <div class="third">
+            <ul>
+                <li>水浒传</li>
+            </ul>
+        </div>
+    </div>
+    是否深度复制？<input type="radio" name="isdeep" value="yes"> 是
+    <input type="radio" name="isdeep" value="no"> 否
+    <input type="button" value="复制" onclick="toClone()">
+</body>
+<script type="text/javascript">
+    // 克隆节点元素
+    function toClone(){
+        // 查找选项
+        // 获取节点通过name
+        var list=document.getElementsByName("isdeep");
+        var isdeep=false;
+        if(list[0].checked){
+            isdeep=true;
+        }
+        // 1.找到要克隆的节点元素
+        var el=document.querySelector(".second");
+        // 2.克隆出一个新的元素节点  true;深度复制，可以赋值子节点
+        var newEl=el.cloneNode(isdeep);
+        // 找到要放的位置
+        var desEl=el.parentElement;
+        // 4.追加节点
+        desEl.appendChild(newEl);
+        
+    }
+</script>
+</html>

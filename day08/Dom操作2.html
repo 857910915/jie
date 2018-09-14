@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom节点</title>
+</head>
+
+<body>
+    <ul>
+        <li>三国演义</li>
+        <li>红楼梦</li>
+        <li>西游记</li>
+        <li>水浒传</li>
+
+    </ul>
+    <div>
+        asa
+    </div>
+</body>
+<script type="text/javascript">
+    /*
+        Dom节点操作：通过当前节点获取子节点、父节点、兄弟节点
+        节点的类型：元素节点，文本节点，属性节点，注释节点
+        获取节点：
+        1.通过id、类、标签、选择器、name获取
+        2.通过节点获取相关联的节点
+    */
+    // 1.获取ul节点
+    var ul = document.querySelector("ul");
+    // 查看节点的类型
+    var type = ul.nodeType;//节点类型
+    var nodeName = ul.nodeName;//节点的名字
+    var value = ul.nodeValue;//节点的值
+    console.log(type);
+    console.log(nodeName);
+    console.log(value);
+    // 2.获取子节点  返回一个集合
+    var nodes = ul.childNodes;
+    console.log(nodes);
+    for (var i = 0; i < nodes.length; i++) {
+        var tmp = nodes[i];
+        console.log(tmp.nodeType);
+        console.log(tmp.nodeName);
+        console.log(tmp.nodeValue);
+    }
+    // 获取元素节点
+    nodes = ul.children;
+    console.log(nodes);
+    for (var i = 0; i < nodes.length; i++) {
+        var tmp = nodes[i].childNodes[0];
+        console.log(tmp.nodeType);
+        console.log(tmp.nodeName);
+        console.log(tmp.nodeValue);
+    }
+    // 获取ul下的第一个节点
+    var firstNode = ul.firstChild;
+    console.log(firstNode);
+    // 获取ul下第一个元素节点
+    var firstElementNode = ul.firstElementChild;
+    console.log(firstElementNode);
+    // 获取最后一个节点
+    var last = ul.lastChild;
+    console.log(last);
+    // 获取最后一个元素节点
+    last = ul.lastElementChild;
+    console.log(last);
+    // 获取兄弟（下一个）元素
+    var nextNode = firstElementNode.nextElementSibling;
+    console.log(nextNode);
+    // 上一个节点元素
+    var preNode = nextNode.previousElementSibling;
+    console.log(preNode);
+    // 获取当前节点的父节点
+    var parentNode = preNode.parentElement;
+    console.log(parentNode);
+    
+</script>
+
+</html>

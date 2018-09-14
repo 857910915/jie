@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="7.5" cy="7.5" r="7.5"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15" height="15" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="mockup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="社区首页" transform="translate(-958.000000, -1025.000000)">
+            <g id="zb" transform="translate(101.000000, 1022.000000)">
+                <g id="Group-18" transform="translate(857.000000, 3.000000)">
+                    <use id="Oval-9" stroke="#9B9B9B" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <path d="M8.03553391,7.5 L6.14330583,5.60777192 C5.94977829,5.41424438 5.95689504,5.0933575 6.14644661,4.90380592 L6.14644661,4.90380592 C6.34170876,4.70854378 6.65859124,4.70884377 6.84995823,4.90021076 L9.09978924,7.15004177 C9.29306583,7.34331836 9.29115623,7.65859124 9.09978924,7.84995823 L6.84995823,10.0997892 C6.65668164,10.2930658 6.33599818,10.2857457 6.14644661,10.0961941 L6.14644661,10.0961941 C5.95118446,9.90093193 5.95417841,9.5813555 6.14330583,9.39222808 L8.03553391,7.5 Z" id="Combined-Shape" fill="#9B9B9B"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

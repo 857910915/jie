@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>轮播图</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="list" id="list">
+            <img src="./image/1.jpg" alt="">
+            <img src="./image/2.jpg" alt="">
+            <img src="./image/3.jpg" alt="">
+            <img src="./image/4.jpg" alt="">
+            <img src="./image/5.jpg" alt="">
+        </div>
+        <div class="num">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        // 获取图像
+        var lists = document.querySelector(".list").children;
+        var lis = document.querySelector("ul").children;
+        // 记录当前选中对象
+        var selection;
+        for (var i = 0; i < lists.length; i++) {
+            // 找到元素
+            var img = lists[i];
+            var li = lis[i];
+            // 赋值
+            li.index=i;
+            // 鼠标移入事件
+            li.onmouseover = function () {
+                // 获取对应图片的下标
+                var tmp=lists[this.index];
+                // 将已选择的恢复
+                lists[selection].style.visibility="hidden";
+                lis[selection].style.backgroundColor="red";
+                // 将现选择的显示
+                tmp.style.visibility="visible";
+                this.style.backgroundColor = "blue";
+                clearInterval(timer);
+                selection=this.index;
+            }
+            li.onmouseout=function(){
+                timer = setInterval(scrollDisplay, 2000);
+            }
+            if (i == 0) {
+                img.style.visibility = "visible";
+                li.style.backgroundColor = "blue";
+                selection = i;
+            } else {
+                // 隐藏
+                img.style.visibility = "hidden";
+                li.style.backgroundColor = "red";
+            }
+        }
+        // 启动定时器
+        var timer = setInterval(scrollDisplay, 2000);
+
+        function scrollDisplay() {
+            // 显示下一个
+            // 判断是不是最后一个
+            if (selection == lists.length - 1) {
+                // 上个隐藏
+                var tmp = lists[selection];
+                var tmp1 = lis[selection];
+                tmp.style.visibility = "hidden";
+                tmp1.style.backgroundColor = "red";
+                // 从零开始
+                selection = 0;
+            } else {
+                // 上一个隐藏
+                var tmp = lists[selection];
+                var tmp1 = lis[selection];
+                tmp.style.visibility = "hidden";
+                tmp1.style.backgroundColor = "red";
+                selection++;
+            }
+            // 显示当前
+            var tmp = lists[selection];
+            var tmp1 = lis[selection];
+            tmp.style.visibility = "visible";
+            tmp1.style.backgroundColor = "blue";
+        }
+        
+    }
+
+</script>
+
+</html>

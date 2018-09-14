@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/test2.css">
+    <title>抽奖</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="top">
+            抽奖活动
+        </div>
+        <div class="body">
+            <table>
+                <tr>
+                    <th>百度</th>
+                    <th>腾讯</th>
+                    <th>阿里</th>
+                    <th>京东</th>
+                    <th>华为</th>
+                </tr>
+                <tr>
+                    <th>滴滴</th>
+                    <th>蚂蚁金服</th>
+                    <th>乐视</th>
+                    <th>中国电网</th>
+                    <th>中石化</th>
+                </tr>
+                <tr>
+                    <th>美团</th>
+                    <th>乐视</th>
+                    <th>小米</th>
+                    <th>网易</th>
+                    <th>酷我</th>
+                </tr>
+                <tr>
+                    <th>爱奇艺</th>
+                    <th>盛大</th>
+                    <th>短文学</th>
+                    <th>浅墨诗韵</th>
+                    <th>浪子一秋</th>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom">
+            <input type="button" name="" id="button" class="button" value="开始" onclick="toStart(this)">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var timer;
+    var button = document.querySelector("#button");
+    function toStart() {
+        // 启动定时器
+        if (timer == undefined) {
+            timer = setInterval(changeStyle, 100);
+            button.setAttribute("value", "停止");
+        } else {
+            clearInterval(timer);
+            timer = undefined;
+            button.setAttribute("value", "开始");
+        }
+    }
+    // 改变样式
+    var a, b;
+    function changeStyle() {
+        var tb = document.querySelector("table");
+        console.log(a);
+        if (a != undefined) {
+            tb.rows[a].cells[b].style.backgroundColor = "white";
+        }
+        // 
+        // 获取要操作的元素
+        a = parseInt(Math.random() * 4);
+        b = parseInt(Math.random() * 5);
+        // console.log(a);
+        var col = tb.rows[a].cells[b];
+        col.style.backgroundColor = "red";
+    }
+
+
+</script>
+
+</html>

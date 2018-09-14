@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内置对象</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            1.字符串
+            2.数学
+            3.日期
+            4.数组
+        */
+        // 字符串
+        var str="abcaaSADSsasdsass";
+        console.log(str.length);//长度        
+        console.log(str.charAt(1));// 查找指定索引的字符
+        console.log(str.indexOf("c"));//查找指定字符首次出现的索引
+        console.log(str.lastIndexOf("a"));//最后一次出现的索引位置
+        console.log(str.split("a"));//分割字符
+        console.log(str.substring(2,5));//截取字符[,)
+        console.log(str.substr(3,2));//所开始，截取长度！
+        console.log(str.toUpperCase());//小写转大写
+        console.log(str.toLowerCase());//大写转小写
+        // 数学
+        var r=Math.random();//随机数
+        console.log(r);
+        console.log(r*100);
+        console.log(Math.ceil(100.2));//向上取整 101
+        console.log(Math.ceil(-100.1));//-100
+        console.log(Math.floor(100.9));//向下取整 100
+        console.log(Math.floor(-100.1));//-101
+        console.log(Math.round(100.4));//四舍五入
+        console.log(Math.round(-100.5));
+        console.log(Math.PI);
+        console.log(Math.E);
+        console.log(Math.abs(-11.1));//求绝对值
+        // 日期
+        var date=new Date();
+        console.log(date);
+        console.log(date.getFullYear());//获取年
+        console.log(date.getMonth());//获取月份
+        console.log(date.getDate());//获取天
+        console.log(date.getHours());//获取小时
+        console.log(date.getMinutes());//获取分钟
+        console.log(date.getSeconds());//获取秒
+        console.log(date.getTime());//获取时间戳
+        // 数组
+        // 1.一维数组
+        var arr=new Array();
+        //查看数组长度
+        console.log(arr.length);
+        //添加元素  通过下标添加
+        arr[0]="尊";
+        arr[1]=12;
+        arr[2]=12.3;
+        arr[3]=23;
+        arr[4]=true;
+        //查看所有元素
+        console.log(arr);
+        //对数组进行重新排序（以字符）返回一个新的数组
+        console.log(arr.sort());
+        console.log(arr.length);
+        // 在数组中每个元素放一个 -- 字符串，返回一个字符串
+        var str=arr.join("--");
+        console.log(str);
+        // 初始化一个指定长度的数组
+        var arr1=new Array(5);
+        console.log(arr1[2]);//undefined
+        // 定义一个数组直接赋值
+        var arr2=[12,23,112,45,22];
+        console.log(arr2);
+        // 对数组进行排序
+        console.log(arr2.sort());
+        // 按照大小顺序排 升序
+        function sortNumber(a,b){
+            return a-b;
+        }
+        console.log(arr2.sort(sortNumber));
+        // 遍历数组中所有元素
+        for (var i = 0; i < arr2.length; i++) {
+            console.log(arr2[i]);
+            
+        }
+        // foreach遍历
+        for(var index in arr2){
+            console.log(arr2[index]);
+        }
+        // 合并数组
+        var arr3=arr.concat(arr2);
+        console.log(arr3);
+        arr3.push("qq");//在尾部添加
+        console.log(arr3);
+        arr3.pop();//从尾部出栈
+        console.log(arr3);
+        // 数组反转
+        console.log(arr3.reverse());
+
+        // 定义二维数组
+        var arr4=[[1,2,3],[2,3,4],[3,4,5]];
+        // 打印输出二维数组
+        for(var row=0;row<arr4.length;row++){
+            for(var col=0;col<arr4[row].length;col++){
+                document.write(arr4[row][col]+"&nbsp;");
+            }
+            document.write("<br>");
+        }
+        // foreach
+        for(var index in arr4){
+            var tmp=arr4[index];
+            for(var index1 in tmp){
+                document.write(tmp[index1]+"&nbsp;");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 求出各个位数相加
+        var num = 15937;
+        var sum = 0;
+        for (var i = 1; i < 5; i++) {
+            var tem = num - (parseInt(num / 10)) * 10;
+            num = parseInt(num / 10);
+            sum = sum + tem;
+        }
+        sum = sum + num;
+        console.log(sum);
+
+        // 计算     
+        var x = eval(prompt());
+        console.log(x);
+
+        // 留言板
+        function toClick() {
+            confirm("确认提交？");
+        }
+    </script>
+    <form action="127.0.0.1">
+        留言标题<input type="text" name="title"><br> 留言内容
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="提交" onclick="  return confirm('确认提交？');">
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>记录信息</title>
+    <style type="text/css">
+        table {
+            border: 1px solid;
+            border-spacing: 0;
+            width: 400px;
+        }
+
+        th {
+            border: 1px solid;
+            height: 40px;
+        }
+
+        td {
+            border: 1px solid;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    id：<input type="text" name="id" id="id"><br><br> 用户名：
+    <input type="text" name="user" id="user"><br><br> 密码：
+    <input type="text" name="psw" id="psw"><br><br> 年龄：
+    <input type="text" name="age" id="age"><br><br> 性别：
+    <input type="text" name="sex" id="sex"><br><br>
+    <button type="button" onclick="toAddRows()">提交!</button>
+    <table>
+        <caption>基本信息</caption>
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+    </table>
+</body>
+<script type="text/javascript">
+
+    // 将信息输出
+    function toAddRows() {
+        // 获取文本框信息
+        var id = document.getElementById("id").value;
+        var user = document.getElementById("user").value;
+        // console.log(user);
+        var psw = document.getElementById("psw").value;
+        // console.log(psw);
+        var age = document.getElementById("age").value;
+        // console.log(age);
+        var sex = document.getElementById("sex").value;
+        // console.log(sex);
+        // 添加第一行信息
+        // 找到table
+        var table = document.querySelector("table");
+        // 添加信息在最后一行
+        var row = table.insertRow(table.rows.length);
+        var col = row.insertCell(0);
+        col.innerText = id;
+        col = row.insertCell(1);
+        col.innerText = user;
+        col = row.insertCell(2);
+        col.innerText = psw;
+        col = row.insertCell(3);
+        col.innerText = age;
+        col = row.insertCell(4);
+        col.innerText = sex;
+    }
+</script>
+
+</html>

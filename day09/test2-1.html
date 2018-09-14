@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/test2.css">
+    <title>抽奖</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="top">
+            抽奖活动
+        </div>
+        <div class="body" id="body">
+
+        </div>
+        <div class="bottom">
+            <input type="button" name="" id="button" class="button" value="开始" onclick="toStart()">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    // 获取要操作的元素
+    var div = document.getElementById("body");
+    // 动态添加span
+    for (var i = 0; i < 25; i++) {
+        // 创建一个新的标签
+        var el = document.createElement("span");
+        // 给标签设置内容
+        el.innerText = i;
+        // 添加子元素
+        div.appendChild(el);
+    }
+
+    var timer;
+    var button = document.querySelector("#button");
+    function toStart() {
+        // 启动定时器
+        if (timer == undefined) {
+            timer = setInterval(changeStyle, 100);
+            button.setAttribute("value", "停止");
+        } else {
+            clearInterval(timer);
+            timer = undefined;
+            button.setAttribute("value", "开始");
+        }
+    }
+    // 改变样式
+    var selection;
+    function changeStyle() {
+        var spans = document.getElementsByTagName("span");
+        if (selection != undefined) {
+            console.log(selection);
+            spans[selection].style.backgroundColor = "white";
+        }
+        selection = parseInt(Math.random() * 25);
+        var spans = document.getElementsByTagName("span");
+        var selectSpan = spans[selection];
+        selectSpan.style.backgroundColor = "red";
+    }
+
+</script>
+
+</html>

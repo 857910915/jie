@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据类型转换</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 数据类型转换：数值型和字符串类型之间的转换
+        var i=10;
+        var i1=10.5;
+        var i2="12";
+        var i3="10.5abc";
+        var i4="abc10.5";
+        var i5="0xa";
+        var i6=null;
+        var i7=true;
+        // 转换成整数
+        console.log(parseInt(i1));
+        console.log(parseInt(i2));  
+        console.log(parseInt(i6));   
+        console.log(parseInt(i7));   
+        // string转int
+        console.log(parseInt(i3));
+        console.log(parseInt(i4));
+        console.log(parseInt(i5));
+        // 强制转成浮点型
+        console.log(parseFloat(i));//如果有小数才保留       
+        console.log(parseFloat(i2));
+        // 转换成string类型
+        var i10=i.toString();
+        console.log(typeof(i10));
+        // 转换成布尔值类型
+        console.log(Boolean(i));
+        console.log(Boolean(i1));
+        console.log(Boolean(i2));
+        console.log(Boolean(i4));
+        console.log(Boolean(i6));
+        console.log(Boolean(0));
+        // 转换成number类型
+        // Number只能解析纯数字类型（字符串）或布尔值类型
+        console.log(Number(i7));
+        console.log(Number(i3));
+        console.log(Number(i6));
+        console.log(Number("123axx"));
+        console.log(Number("213"));
+        console.log(Number("0xda"));
+    </script>
+</body>
+</html>

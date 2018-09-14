@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: block;
+}
+.content{
+    width: 500px;
+    margin: auto;
+}
+.top{
+    text-align: center;
+    height: 50px;
+    color: red;
+    font-size: 30px;
+
+}
+table{
+    width: 100%;
+    border: 1px solid red;
+    border-spacing: 0;
+}
+th{
+    border: 1px dashed rgb(189, 189, 86);
+    height: 40px;
+}
+.bottom{
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+/* test2-1 */
+.body{
+    width: 512px;
+    height: 260px;
+    border: 1px solid red;
+}
+span{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border: 1px dashed #b1da1f;
+    line-height: 50px;
+    text-align: center;
+}

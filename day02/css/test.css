@@ -1,0 +1,7 @@
+
+td:hover{
+  
+}
+td:hover+td{
+    background-color: red;
+}

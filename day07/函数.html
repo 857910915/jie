@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 无参数无返回值
+        method();
+        function method() {
+            // alert("无参数无返回值");
+        }
+        // 无参数有返回值
+        function method1() {
+            return "无参数有返回值";
+        }
+        // alert(method1);
+        // 有参数有返回值
+        function getSum(i, j) {
+            return i + j;
+        }
+        var sum = getSum();
+        console.log(sum);
+        // 有参数无返回值
+        function max(i, j) {
+            console.log(i+j);
+        }
+        max("你","好");
+        // 预定义函数
+        var i="6";
+        console.log(parseInt(i));
+        i=isNaN(i);//判断当前变量是否是NaN类型
+        if(i){
+            // alert(i+"是非数字");
+        }else{
+            // alert(i+"是数字");
+        }
+        // eval();可以将字符串转成js表达式
+        var x="var x=10; var y=20; document.write(x+y);"
+        // document.write(x);
+        eval(x);
+        // 定义单击函数
+        function cleck(){
+            alert("点了一下！");
+        }
+        function toOver(){
+            alert("onmouseover事件！");
+        }
+        function toDown(){
+            alert("onmousedown事件！");
+        }
+        function toChange(){
+            alert("内容改变！！！");
+        }
+       function toOkay(){
+           alert("还行！");
+       }
+    </script>
+    <!-- 控件都要有一些事件 -->
+    <br>
+    <input type="button" value="点击一下" onclick="cleck()" 
+    onmouseover="toOver()">
+    <br><br>
+    <input type="text" onfocus="console.log('获取焦点！');"
+    onblur="console.log('失去焦点！');">
+    <br><br>
+    <input type="button" value="事件" onmousedown="toDown()">
+    <br><br>
+    <input type="text" value="点我试试！" onchange="toChange()">
+    <br><br>
+    <input type="text" onkeydown="toOkay()">
+</body>
+
+</html>

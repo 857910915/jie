@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+    <script type="text/javascript">
+        // 正则表达式 主要对字符串进行处理（匹配 分割 替换）
+
+        // 查找字符串
+        var patt=/world/;//规则  /匹配规则/[i]  i不区分大小写
+        var str="hello World";
+        var index=str.search(patt);
+        document.write(index+"<br>");
+
+        // 替换字符串
+        str ="hello zun a zun";
+        patt=/zun/g;//g 代表全局
+        var str1=str.replace(patt,"lzyq");
+        document.write(str1+"<br>");
+        // 匹配规则  手机号
+        var reg=/1[3578][0-9]{9}$/;//规则
+        var phone="15912341234";
+        //匹配 test("匹配的字符串");返回布尔值
+        var rs=reg.test(phone);
+        document.write(rs);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

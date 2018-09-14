@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .advertisement {
+            height: 100px;
+            width: 50px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background: #666666;
+            color: red;
+            line-height: 20px;
+            text-align: center;
+        }
+    </style>
+    <title>广告</title>
+</head>
+
+<body>
+    <div class="advertisement" id="ad">
+        广告
+    </div>
+</body>
+<script type="text/javascript">
+    var ad = document.getElementById("ad");
+    var y = 1;
+    var x = 1;
+    var xv=20;
+    var yv=10;
+    function run(){
+        if(x<1||x>window.innerWidth-50){
+           xv=-xv;
+        }x+=xv;
+        if(y<1||y>window.innerHeight-100){
+            yv=-yv;
+        }        
+        y+=yv;
+        // 将x、y赋值给定位
+        ad.style.left=x+"px";
+        ad.style.top=y+"px";
+    }
+    var timer=setInterval(run,100);
+    ad.onmouseover=function(){
+        clearInterval(timer);
+    }
+    ad.onmouseout=function(){
+        timer=setInterval(run,100);
+    }
+</script>
+
+</html>

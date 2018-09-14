@@ -1,0 +1,47 @@
+#foot{
+    margin-top: 16px;
+    background: #dfdfdf;
+    overflow: hidden;
+    padding: 10px 0;
+}
+/* 左边 */
+#foot>.left{
+    border-right: 1px solid #bcbcbc;
+    width:calc(50% - 1px);
+}
+#foot>div{
+    float: left;
+    width: 50%;
+    height: 164px;
+}
+#foot .link{
+    float: right;
+    margin-right: 44px;
+}
+#foot>.left>.link img{
+    width: 30px;
+    height: 25px;
+    margin-left: 9px;
+}
+/* 右边 */
+#foot>.right{
+    color: #6e726e;
+    font-size: 12px;
+    line-height: 19px;
+    /* float: left; */
+}
+#foot>div{
+    float: left;
+    width: 50%;
+    height: 164px;
+}
+#foot>.right ul{
+    margin-left: 30px;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#foot>.right img{
+    width: 143px;
+}

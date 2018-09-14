@@ -1,0 +1,18 @@
+.big{
+    margin: auto;
+    height: 1000px;
+    width: 1500px;
+    border: solid 1px;
+}
+.left{
+    
+    width: 300px;
+    height: 500px;
+    border: solid 1px coral;
+}
+.line{
+    float: left; 
+    height: 325px;
+    width: 600px;   
+    border: solid 1px blue;
+}
